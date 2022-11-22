@@ -5,8 +5,9 @@
 			color="transparent"
 			rail-width="64"
 			width="280"
-			floating
 			:rail="rail"
+			floating
+      touchless
 		>
 			<v-toolbar
 				class="text-primary my-4"
@@ -73,7 +74,12 @@
       class="d-lg-none align-center"
       elevation="0"
       mandatory
+      padless
       grow
+      style="
+        height:calc(56px + env(safe-area-inset-bottom));
+        padding-bottom:env(safe-area-inset-bottom);
+      "
     >
       <div class="px-2 flex-grow-1 d-flex justify-space-between">
         <v-btn
